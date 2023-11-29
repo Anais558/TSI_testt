@@ -1,0 +1,699 @@
+/* Basic reset */
+/* body {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+} */
+
+/* Navbar css */
+/* .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007A33;
+    padding: 20px 50px;
+    position: relative;
+}
+
+.logo {
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.toggle-button {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.toggle-button .bar {
+    width: 35px;
+    height: 4px;
+    border-radius: 5px;
+    background-color: #fff;
+    margin: 3px 0px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 25px;
+}
+
+.nav-links li a {
+    font-size: 17px;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.4s ease;
+}
+
+.nav-links li a:hover {
+    color: #FDB927;
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Roboto+Mono:wght@200&family=Sometype+Mono:wght@700&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    /* background: #007A33;  */
+    min-height: 200vh;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 40px 100px;
+    z-index: 100000;
+}
+
+header.sticky {
+    padding: 5px 100px;
+    background: #fff;
+}
+
+header .logo {
+    position: relative;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.6s;
+}
+
+header ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li {
+    position: relative;
+    list-style: none;
+}
+
+header ul li a {
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: 500px;
+    transition: 0.6s;
+}
+
+
+
+.toggle-button {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.toggle-button .bar {
+    width: 35px;
+    height: 4px;
+    border-radius: 5px;
+    background-color: #fff;
+    margin: 3px 0px;
+}
+
+
+
+
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: 700px;
+    background: url(../img/rename.png);
+    background-size: cover;
+}
+
+header.sticky .logo,
+header.sticky ul li a {
+    color: #000;
+}
+
+header.sticky ul li a:hover {
+    color: #963821;
+}
+
+header.sticky .toggle-button .bar {
+    background-color: #000000;
+}
+
+
+#search-wrapper {
+    display: flex;
+    border: 1px solid rgba(0, 0, 0, 0.276);
+    align-items: stretch;
+    border-radius: 4px;
+    margin-left: 20px;
+    margin-right: 10px;
+    background-color: #fff;
+    overflow: hidden;
+    max-width: 250px;
+    box-shadow: 2px 1px 5px 1px rgba(0, 0, 0, 0.273);
+
+}
+
+#search {
+    border: none;
+    width: 250px;
+    font-size: 15px;
+}
+
+#search:focus {
+    outline: none;
+}
+
+.search-icon {
+    margin: 7px;
+    color: rgba(0, 0, 0, 0.564);
+}
+
+#search-button {
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    background-color: #1dbf73;
+    padding: 0px 10px;
+}
+
+
+header ul li {
+    position: relative;
+    margin: 0 10px 0 0;
+    float: left;
+    display: inline-block;
+}
+
+li>a:after {
+    content: ' »';
+}
+
+/* Change this in order to change the Dropdown symbol */
+
+li>a:only-child:after {
+    content: '';
+}
+
+header ul li a {
+    padding: 10px;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+}
+
+header ul li a:hover {
+    opacity: 0.5;
+}
+
+header ul li ul {
+    display: none;
+    position: absolute;
+    left: 0;
+    background: #37bc9b;
+    float: left;
+}
+
+header ul li ul li {
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, .3);
+}
+
+header ul li:hover ul {
+    display: block;
+}
+
+.all-content {
+    margin-top: 100px;
+}
+
+/* Styles pour les éléments de texte à l'intérieur du carrousel */
+.text-item, .title-container {
+    width: 700px;
+    position: absolute;
+    top: 200px;
+    margin-left: 100px;
+    animation: slideText 5s infinite;
+    /* Durée et type d'animation */
+}
+
+.text-item h1, .title-container h1 {
+    color: #fff;
+    font-size: 35px
+}
+
+.text-item p, .title-container p {
+    margin: 0;
+    color: #e8e5e5;
+    padding: 0px;
+    font-size: 13px;
+}
+
+
+@media screen and (max-width: 898px) {
+    header {
+        padding: 20px 25px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        background-color: #007A33;
+        padding: 25px;
+        top: 75%;
+        left: 0;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .nav-links li {
+        padding: 12px 0px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+
+
+.rectangle {
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    background-color: #007A33;
+    margin-top: 0px;
+}
+
+
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-container div {
+    background-color: #007A33;
+    margin: 0px;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+.flex-container li {
+    list-style: none;
+    /* Supprime les puces de la liste */
+    margin: 0px;
+    /* Marge de 5 pixels autour des éléments li */
+}
+
+.flex-container li a {
+    text-decoration: none;
+    /* Supprime la décoration des liens */
+    color: #fff;
+    /* Couleur du texte des liens */
+    cursor: pointer;
+}
+
+.flex-container div:hover {
+    background-color: #089a45d5;
+}
+
+/* Ajoutez un style pour la classe active */
+.item.active {
+    background-color: #089a45d5;
+    /* Couleur de fond souhaitée */
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    /* Centre horizontalement */
+    align-items: center;
+    /* Centre verticalement */
+    height: 200px;
+    /* Ajustez la hauteur selon vos besoins */
+}
+
+.title h1 {
+    font-size: 40px;
+    text-decoration: underline;
+}
+
+.league-container {
+    display: flex;
+}
+
+.league {
+    width: 400px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.top-leagues {
+    display: flex;
+    justify-content: center;
+    background-color: #007A33;
+    /* Centre horizontalement */
+    align-items: center;
+    /* Centre verticalement */
+    height: 50px;
+    color: #fff;
+}
+
+.top-pays {
+    display: flex;
+    justify-content: center;
+    background-color: #007A33;
+    /* Centre horizontalement */
+    align-items: center;
+    /* Centre verticalement */
+    height: 50px;
+    margin-top: 50px;
+    color: #fff;
+}
+
+
+tr:hover {
+    background-color: #f5f5f5;
+    /* Change la couleur de fond au survol */
+    /* Ajoutez d'autres styles pour l'effet de survol si nécessaire */
+}
+
+tr, td {
+    cursor: pointer;
+}
+
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+}
+
+.styled-table-contries {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+}
+
+
+
+.styled-table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    /* Centre le contenu verticalement */
+}
+
+.styled-table-contries td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    /* Centre le contenu verticalement */
+}
+
+.styled-table td .logo {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.styled-table td img {
+    vertical-align: middle;
+    /* Aide à aligner correctement l'image et le texte */
+}
+
+.styled-table-contries td .logo {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.styled-table-contries td img {
+    vertical-align: middle;
+    /* Aide à aligner correctement l'image et le texte */
+}
+
+.styled-table-contries img.logo {
+    max-width: 50px;
+    /* Changer la taille maximale des images des drapeaux */
+    max-height: 30px;
+    /* Changer la hauteur maximale des images des drapeaux */
+    /* Ajouter d'autres styles si nécessaire */
+}
+
+
+
+.all-match {
+    width: 900px;
+    margin-right: 20px;
+}
+
+.match-content {
+    background-color: #fff;
+    padding: 10px;
+}
+
+.match-tournament {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    margin-top: 20px;
+
+    img {
+        width: 20px;
+        margin-right: 12px;
+    }
+
+
+}
+
+.match {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Style for the match container */
+.match {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Style for each column */
+.column {
+    flex: 1;
+    text-align: center;
+}
+
+/* Style for team names */
+.team-name {
+    font-size: 18px;
+}
+
+/* Style for team logos */
+.team-logo img {
+    width: 50px;
+    /* Adjust the width as needed */
+    height: auto;
+}
+
+/* Style for match details (date, score, time) */
+.match-details {
+    font-size: 16px;
+}
+
+/* Style for match date */
+.match-date {
+    margin-bottom: 5px;
+}
+
+/* Style for match score */
+.match-score {
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+/* Style for match time lapsed */
+.match-time-lapsed {
+    font-style: italic;
+}
+
+
+.titles {
+    margin-top: 20px;
+    display: flex;
+    color: #fff;
+    background-color: #007A33;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.news-container {
+    max-width: 800px;
+    margin: 20px auto 0;
+    padding: 20px;
+}
+
+/*  */
+
+.article {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+.article-title {
+    font-family: "Libre Baskerville", serif;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #1a3547;
+}
+
+.article-content {
+    font-family: "Libre Baskerville", serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.author {
+    color: #888;
+    margin-top: 10px;
+}
+
+
+
+.footer {
+    background: #007A33;
+    padding: 30px 0px;
+    font-family: 'Play', sans-serif;
+    text-align: center;
+}
+
+.footer .row {
+    width: 100%;
+    margin: 1% 0%;
+    padding: 0.6% 0%;
+    color: #fff;
+    font-size: 0.8em;
+}
+
+.footer .row a {
+    text-decoration: none;
+    color: #fff;
+    transition: 0.5s;
+}
+
+.footer .row a:hover {
+    color: #fff;
+}
+
+.footer .row ul {
+    width: 100%;
+}
+
+.footer .row ul li {
+    display: inline-block;
+    margin: 0px 30px;
+}
+
+.footer .row a i {
+    font-size: 2em;
+    margin: 0% 1%;
+}
+
+@media (max-width:720px) {
+    .footer {
+        text-align: left;
+        padding: 5%;
+    }
+
+    .footer .row ul li {
+        display: block;
+        margin: 10px 0px;
+        text-align: left;
+    }
+
+    .footer .row a i {
+        margin: 0% 3%;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .title-container {
+        width: 500px;
+    }
+
+    .title-container h1 {
+        font-size: 20px;
+    }
+
+    .banner {
+        height: 700px;
+    }
+
+    .rectangle {
+        margin-top: 650px;
+    }
+
+    .rectangle .flex-container .item li a {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 610px) {
+    .title-container {
+        width: 300px;
+    }
+
+    .title-container h1 {
+        font-size: 10px;
+    }
+}

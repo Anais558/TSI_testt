@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body onload="afficherInfo(1)">
+    <!-- /*Navbar*/ -->
+    <header>
+      <a href="" class="logo">LOGO</a>
+      <div class="toggle-button" id="toggleButton">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#">Acceuil</a></li>
+        <li>
+          <a href="#">Sports</a>
+          <ul>
+            <li><a href="#">Football</a></li>
+            <li><a href="#">Basketball</a></li>
+            <li><a href="#">Tennis</a></li>
+            <li><a href="#">Golf</a></li>
+            <li><a href="#">Hockey</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#">En direct</a>
+          <ul>
+            <li><a href="#">Football</a></li>
+            <li><a href="#">Basketball</a></li>
+            <li><a href="#">Tennis</a></li>
+            <li><a href="#">Golf</a></li>
+            <li><a href="#">Hockey</a></li>
+          </ul>
+        </li>
+        <li><a href="#">S'inscrire</a></li>
+      </ul>
+    </header>
+
+    <div class="banner">
+      <div class="title-container">
+        <h1 id="randomTitle">
+          "Votre accès privilégié aux meilleurs moments sportifs : Soyez au cœur de l'action !
+        </h1>
+        <br />
+        <p>
+          Plongez dans un monde où chaque coup, chaque point, chaque but compte. Notre mission est de vous offrir un accès facile et excitant à tous les sports, de vous tenir informé des derniers matchs, des compétitions à venir et de vous permettre de vivre l'action comme si vous y étiez. Explorez, vibrez et vivez le sport avec nous.
+        </p>
+      </div>
+    </div>
+
+
+    <!-- /*sports choice*/ -->
+    <div class="rectangle">
+      <div class="flex-container">
+        <div id="div1" onclick="afficherInfo(1)" class="item">
+          <li>
+            <a><i class="fas fa-futbol"></i> Football</a>
+          </li>
+        </div>
+        <div id="div2" onclick="afficherInfo(2)" class="item">
+          <li>
+            <a><i class="fas fa-basketball-ball"></i> Basketball</a>
+          </li>
+        </div>
+        <div id="div3" onclick="afficherInfo(3)" class="item">
+          <li>
+            <a><i class="fa-solid fa-table-tennis-paddle-ball"></i> Tennis</a>
+          </li>
+        </div>
+        <div id="div4" onclick="afficherInfo(4)" class="item">
+          <li>
+            <a><i class="fas fa-golf-ball"></i> Golf</a>
+          </li>
+        </div>
+        <div id="div5" onclick="afficherInfo(5)" class="item">
+          <li>
+            <a><i class="fas fa-football-ball"></i> Rugby</a>
+          </li>
+        </div>
+        <div id="div6" onclick="afficherInfo(6)" class="item">
+          <li>
+            <a><i class="fas fa-volleyball-ball"></i> Volleyball</a>
+          </li>
+        </div>
+        <div id="div7" onclick="afficherInfo(7)" class="item">
+          <li>
+            <a><i class="fa-solid fa-hockey-puck"></i> Cricket</a>
+          </li>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- /*all-content*/ -->
+    <div class="all-content">
+      <div id="infoDisplay"></div>
+      <!-- /*football content*/ -->
+      <div id="content1" style="display: none">
+        <div class="league-container">
+          <div class="league">
+            <div class="top-leagues">Top leagues</div>
+            <table class="styled-table">
+              <!-- /*display leagues*/ -->
+            </table>
+            <div class="top-pays">Country</div>
+            <table class="styled-table-contries">
+              <!-- /*display countries*/ -->
+            </table>
+          </div>
+          <div class="all-match">
+            <div class="titles">
+              <h1>LIVESCORE</h1>
+            </div>
+            <div class="match-content">
+              <!-- /*display live match*/ -->
+            </div>
+  
+            <div class="news">
+              <div class="titles">
+                <h1>NEWS</h1>
+              </div>
+              
+              <!-- /*display football news*/ -->
+              <div class="news-container">
+                <article class="article">
+                  <h2 class="article-title" id="article-title"></h2>
+                  <p class="article-content" id="article-content"></p>
+                  <p class="author" id="author"></p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div id="content2" style="display: none">
+        
+      </div>
+      <div id="content3" style="display: none">3</div>
+      <div id="content4" style="display: none">4</div>
+      <div id="content5" style="display: none">5</div>
+      <div id="content6" style="display: none">6</div>
+      <div id="content7" style="display: none">7</div>
+    </div>
+
+    <!-- /*footer*/ -->
+    <footer>
+      <div class="footer">
+        <div class="row">
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-instagram"></i></a>
+          <a href="#"><i class="fa fa-youtube"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+        </div>
+
+        <div class="row">
+          <ul>
+            <li><a href="#">Contact us</a></li>
+            <li><a href="#">Our Services</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Career</a></li>
+          </ul>
+        </div>
+
+        <div class="row">
+           Copyright © 2021  - All rights reserved || Designed By:
+          Anais AHOSSI
+        </div>
+      </div>
+    </footer>
+    <script src="../app.js"></script>
+    <script
+      src="https://kit.fontawesome.com/ee787ece48.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
