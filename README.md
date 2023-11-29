@@ -22,3 +22,6 @@ Exécution
 Télécharge ou clone tous les fichiers du projet dans un dossier sur ton ordinateur.
 Assurez-vous que tous les fichiers sont dans la même arborescence que celle décrite dans le code.
 Ouvre le fichier index.html dans un navigateur web en double-cliquant dessus ou en faisant un clic droit et en sélectionnant "Ouvrir avec..." puis en choisissant le navigateur de ton choix.
+
+
+Api utilise : https://allsportsapi.com/soccer-football-api-documentation
